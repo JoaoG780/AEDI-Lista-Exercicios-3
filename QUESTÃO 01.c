@@ -9,9 +9,14 @@ int main() {
 
     char letras[tamanho];
 
-    printf("Digite %d letras: ", tamanho);
+    printf("Digite %d letras minusculas: ", tamanho);
     for (int i = 0; i < tamanho; i++) {
         scanf(" %c", &letras[i]);
+        if (letras[i] >= 'A' && letras[i] <= 'Z') {
+            printf("\n");
+            printf("ERRO, reinicie o codigo e digite letras minusculas.");
+            return 1;
+        }
     }
 
     for (i = 0; i < tamanho - 1; i++) {
